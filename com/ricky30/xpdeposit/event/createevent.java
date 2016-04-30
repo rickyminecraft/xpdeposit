@@ -25,7 +25,7 @@ public class createevent
 		this.config = xpdeposit.plugin.getConfig();
 		final Sign sign = event.getTargetTile();
 		final Vector3i position = sign.getLocation().getBlockPosition();
-		final World world = sign.getLocation().getExtent();
+		final World world = player.getWorld();
 		final SignData text = event.getText();
 
 		if (text.get(0).get().toPlain().equals("[xpdepot]"))

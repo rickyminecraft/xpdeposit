@@ -34,7 +34,7 @@ public class useevent
 		if (service != null)
 		{
 			final Vector3i position = event.getTargetBlock().getPosition();
-			final String World = event.getTargetBlock().getLocation().get().getExtent().getName();
+			final String World = player.getWorld().getName();
 			final String NodeName = World.concat(String.valueOf(position.getX()).concat(String.valueOf(position.getY()).concat(String.valueOf(position.getZ()))));
 			if (this.config.getNode("XPdeposit", "signs").getChildrenMap().containsKey(NodeName))
 			{
