@@ -56,9 +56,23 @@ public class createevent
 			xpdeposit.plugin.save();
 			text.set(sign.lines().set(0, Text.of(TextColors.RED, "XP DEPOT")));
 			sign.offer(text);
-			text.set(sign.lines().set(1, Text.of("Take: " + BuyPrice)));
+			if (BuyPrice == 0)
+			{
+				text.set(sign.lines().set(1, Text.of("Take: ",TextColors.GREEN, "free")));
+			}
+			else
+			{
+				text.set(sign.lines().set(1, Text.of("Take: " + BuyPrice)));
+			}
 			sign.offer(text);
-			text.set(sign.lines().set(2, Text.of("Put: " + SellPrice)));
+			if (SellPrice == 0)
+			{
+				text.set(sign.lines().set(2, Text.of("Put: ",TextColors.GREEN, "free")));
+			}
+			else
+			{
+				text.set(sign.lines().set(2, Text.of("Put: " + SellPrice)));
+			}
 			sign.offer(text);
 			text.set(sign.lines().set(3, Text.of("Xp level: " + Xplevelnumber)));
 			sign.offer(text);
